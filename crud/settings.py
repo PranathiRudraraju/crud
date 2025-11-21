@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ge#16m_b@0jsrl*&!t+*5o%!_*caisgtzx4tjtpdd!@v040(i-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -125,3 +125,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL='/'
 LOGIN_URL='login'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

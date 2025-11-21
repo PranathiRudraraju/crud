@@ -1,9 +1,11 @@
 services:
   - type: web
-    name: crud-app
+    name: crud-project
     env: python
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn crud.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
         value: 3.12
+      - key: DJANGO_SETTINGS_MODULE
+        value: crud.settings
